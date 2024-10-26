@@ -1,0 +1,274 @@
+/* src/App.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.App {
+  width: 100%;
+  max-width: 700px;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 300px;  /* Approximate height for 3 tasks */
+  overflow-y: auto;    
+  overflow-x: hidden;  
+}
+
+
+.task-list::-webkit-scrollbar {
+  width: 8px; /* Set the width of the scrollbar */
+}
+
+.task-list::-webkit-scrollbar-track {
+  background-color: red; 
+}
+
+.task-list::-webkit-scrollbar-thumb {
+  background-color: blue; /* Color of the scrollbar thumb (the "ball") */
+  border-radius: 4px;     /* Rounds the corners of the thumb */
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.1s;
+}
+
+.task-item:hover {
+  transform: scale(1.02);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+  margin: 0;
+}
+
+.task-creation {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.task-creation input {
+  flex: 1;
+  padding: 0.6rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.task-creation input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.add-task-button, .refresh-button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.add-task-button {
+  background-color: #007bff;
+}
+
+.refresh-button {
+  background-color: #28a745;
+}
+
+.add-task-button:hover {
+  background-color: #0056b3;
+}
+
+.refresh-button:hover {
+  background-color: #218838;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.1s;
+}
+
+.task-item:hover {
+  transform: scale(1.02);
+}
+
+.task-content h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.task-content p {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.completed .task-content h3,
+.completed .task-content p {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+.task-actions button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-left: 0.5rem;
+}
+
+.mark-complete {
+  background-color: #007bff;
+  color: white;
+}
+
+.mark-complete:hover {
+  background-color: #0056b3;
+}
+
+.mark-pending {
+  background-color: #ffc107;
+  color: white;
+}
+
+.mark-pending:hover {
+  background-color: #e0a800;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+
+.task-edit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.task-edit input[type="text"],
+.task-edit select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #a0aec0;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.task-edit input[type="text"]:focus,
+.task-edit select:focus {
+  border-color: #3182ce;
+  box-shadow: 0 0 5px rgba(49, 130, 206, 0.3);
+}
+
+.save-button,
+.cancel-button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.save-button {
+  background-color: #3182ce;
+  color: white;
+}
+
+.save-button:hover {
+  background-color: #2b6cb0;
+}
+
+.cancel-button {
+  background-color: #e53e3e;
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #c53030;
+}
+
+.task-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.task-filters input[type="text"],
+.task-filters select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #a0aec0;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.task-filters input[type="text"]:focus,
+.task-filters select:focus {
+  border-color: #3182ce;
+  box-shadow: 0 0 5px rgba(49, 130, 206, 0.3);
+}
